@@ -10,8 +10,8 @@ const port = process.env.PORT || 3000;
 
 // LINE Bot Configuration
 const config = {
-  channelAccessToken: '15B8EJT7XRj0/dUetPlv7k7GwAR88mb4wZ+0oQrLMitiYyH0pxpOjtS/DoPjq5N92hwe/4ZrwLhtBd259CSDJAAUuCJB8MnnUwBYYgZId6ZOJVWS4jVpULDZy8Rx/9K1r4c8bzMejghQvitgerp1XgdB04t89/1O/w1cDnyilFU=', // ใส่ Access Token จาก LINE Developers
-  channelSecret: '0d1dce55f8645be9743c94ea7eace7be' // ใส่ Channel Secret จาก LINE Developers
+  channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
+  channelSecret: process.env.CHANNEL_SECRET // ใส่ Channel Secret จาก LINE Developers
 };
 
 const client = new line.Client(config);
